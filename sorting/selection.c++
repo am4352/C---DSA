@@ -19,21 +19,32 @@ void selection_sort(int arr[], int n)
   }
 
 }
+void insertion_sort(int arr[], int n)
+{
+for (int i = 0; i <=n-1 ; i++)
+{
+  int j = i;
+  while (j > 0 && arr[j-1]>arr[j])    
+  {
+    swap(arr[j - 1], arr[j]);
+    j--;
+    cout << "run" << endl;
+  } 
+}
+}
+
+
+
 int main()
 {
-   int n ;
-   cout << "enter the size array" << endl;
-   cin >> n;
-   int arr[n];
+  int n = 5;
+  int arr[n] = {5,4,3,2,1};
+  // selection_sort(arr,n );
+  insertion_sort(arr, n);
 
-   for (int i = 0; i < n; i++)
-   {
-       cin >> arr[i];
-   }
-  selection_sort(arr,n );
   for (int j = 0; j < n; j++)
   {
-      cout << arr[j] << " ";
+    cout << arr[j] << " ";
   }
   return 0;
 }
